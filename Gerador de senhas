@@ -1,0 +1,94 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/isabelmarquess/isabelmarquess/blob/main/Gerador%20de%20senhas\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import secrets #biblioteca mais usada quando usamos senhas\n",
+        "import string #biblioteca para letra e caracteres\n",
+        "\n",
+        "def obter_tamanho_senha():\n",
+        "    while True:\n",
+        "        try:\n",
+        "            tamanho = int(input(\"Digite a senha: \"))\n",
+        "            if tamanho < 1:\n",
+        "                print(\"O tamanho da senha deve ser maior que zero.\")\n",
+        "            else:\n",
+        "                return tamanho\n",
+        "        except ValueError:\n",
+        "            print(\"Por favor, insira um número válido.\")\n",
+        "\n",
+        "def gerar_senha_completa(tamanho):\n",
+        "    if tamanho < 4:\n",
+        "        raise ValueError(\"O tamanho da senha deve ser de no mínimo 4 caracteres para garantir diversidade.\")\n",
+        "\n",
+        "    letras_maiusculas = string.ascii_uppercase\n",
+        "    letras_minusculas = string.ascii_lowercase\n",
+        "    digitos = string.digits\n",
+        "    simbolos = string.punctuation\n",
+        "\n",
+        "    # Garante pelo menos um caractere de cada tipo\n",
+        "    senha = [\n",
+        "        secrets.choice(letras_maiusculas),\n",
+        "        secrets.choice(letras_minusculas),\n",
+        "        secrets.choice(digitos),\n",
+        "        secrets.choice(simbolos)\n",
+        "    ]\n",
+        "\n",
+        "    # Completa a senha com caracteres aleatórios\n",
+        "    todos_caracteres = letras_maiusculas + letras_minusculas + digitos + simbolos\n",
+        "    senha += [secrets.choice(todos_caracteres) for _ in range(tamanho - 4)]\n",
+        "\n",
+        "    # Embaralha a senha para não ficar previsível\n",
+        "    secrets.SystemRandom().shuffle(senha)\n",
+        "\n",
+        "    return ''.join(senha)\n",
+        "\n",
+        "# Principal\n",
+        "tamanho_senha = obter_tamanho_senha()\n",
+        "senha_gerada = gerar_senha_completa(tamanho_senha)\n",
+        "print(\"Sua senha gerada é:\", senha_gerada)\n"
+      ],
+      "metadata": {
+        "id": "6TgugYBDDm5o",
+        "outputId": "0b68cf79-6b2f-43d7-f155-7a8503a704a7",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite a senha: 9\n",
+            "Sua senha gerada é: bI1*{U$V+\n"
+          ]
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "colab": {
+      "name": "Olá, este é o Colaboratory",
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "name": "python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}
