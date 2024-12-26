@@ -32,11 +32,11 @@
 
 ## Vamos Conectar!
 
-[![Instagram](https://img.shields.io/badge/-{_isabelmarquess}-purple?style=flat-square&logo=Instagram&logoColor=white&link={Link})]({[Link](https://www.instagram.com/_isabelmarquess/)})
+ [![Instagram](https://img.shields.io/badge/-_isabelmarquess-purple?style=flat-square&logo=Instagram&logoColor=white&link=https://www.instagram.com/_isabelmarquess/)](https://www.instagram.com/_isabelmarquess/)
 
 
 
 🎨 Aqui está um dos dos meus projetos  criativos e inovadores:
 
-1. [Projeto Python]([https://github.com/[isabelmarquess]/projeto2](https://github.com/isabelmarquess/machine-learning-with-python)): Uma aventura fascinante com código e arte.
+1. [Projeto Python](https://github.com/isabelmarquess/machine-learning-with-python): Uma aventura fascinante com código e arte.
 
