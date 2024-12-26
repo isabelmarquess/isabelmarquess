@@ -2,7 +2,7 @@
   <img src="https://i.pinimg.com/originals/0f/25/e4/0f25e4668c1c7740b5ed41835339d67f.gif" alt="Software Developer">
 </div>
 
-# 🚀 Olá,  me chamo Ana Isabel ✨✨
+# 🚀 Olá,  me chamo Ana Isabel ✨💙✨
 
 ## Sobre mim
 
@@ -14,7 +14,7 @@
 
 -  Linguagens de Programação: 
 
-    [![My Skills](https://skillicons.dev/icons?i=java,javascript,python)](https://skillicons.dev)
+    [![My Skills](https://skillicons.dev/icons?i=java,i=c,sql,python)](https://skillicons.dev)
 - Frameworks e Bibliotecas: 
 
     [![My Skills](https://skillicons.dev/icons?i=spring,react,django)](https://skillicons.dev)
